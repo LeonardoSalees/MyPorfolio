@@ -7,11 +7,12 @@
 }
 :root {
   font-size: 62.5%;
-  --hue: 1;
-  --background-color-dark: hsl(var(--hue), 0%, 0%);
+  --hue: 210;
+  --background-color-dark: hsl(1, 0%, 0%);
   --headline-color: hsl(280, 12%, 95%);
   --paragraph-color: hsl(208, 9%, 67%);
-  --primary-color: hsl(47, 100%, 72%);
+  --primary-color: hsl(var(--hue), 100%, 72%);
+  --secondary-color: hsl(var(--hue), 36%, 50%);
 
   --headline-bck-color: hsl(var(--hue), 0%, 7%);
 
@@ -204,6 +205,8 @@ section#home {
 section#home img {
   width: 12.4rem;
   border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  filter: opacity(0.95) drop-shadow(0 0 0 var(--primary-color));
 }
 
 section#home h1 {
@@ -263,6 +266,20 @@ section#projects .project img {
 }
 
 /* SKILLS */
+
+section#skills {
+  background-color: var(--secondary-color);
+}
+
+section#skills h2 {
+  color: black;
+  border-color: black;
+  margin-bottom: 3rem;
+}
+
+section#skills img {
+  width: 10rem;
+}
 
 footer p {
   color: var(--paragraph-color);
