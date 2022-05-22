@@ -7,10 +7,10 @@
 }
 :root {
   font-size: 62.5%;
-  --hue: 210;
+  --hue: 253;
   --background-color-dark: hsl(1, 0%, 0%);
   --headline-color: hsl(280, 12%, 95%);
-  --paragraph-color: hsl(208, 9%, 67%);
+  --paragraph-color: hsl(0, 8%, 83%);
   --primary-color: hsl(var(--hue), 100%, 72%);
   --secondary-color: hsl(var(--hue), 36%, 50%);
 
@@ -229,18 +229,29 @@ section#home ul {
 
 /* INFORMATION */
 
+section#information {
+  height: 21rem;
+}
+
 section#information .stats {
   display: flex;
-  gap: 1.2rem;
   justify-content: center;
 }
 
 section#information .stats .stat {
-  flex: 1;
+  display: flex;
+  height: 12rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 section#information .stats .stat + .stat {
   border-left: 1px solid var(--primary-color);
+}
+
+section#information .stats .stat p {
+  padding-inline: 1rem;
 }
 
 section#information .btn {
@@ -257,12 +268,30 @@ section#information .btn {
 
 /* PROJECTS */
 
+section#projects {
+  padding-top: 6rem;
+  background-color: white;
+}
+section#projects .project {
+  background-color: rgba(216, 216, 216, 0.351);
+  border: 2px solid inherit;
+  border-radius: 2rem;
+}
+
+section#projects h2 {
+  color: black;
+}
+section#projects h3 {
+  padding: 1rem;
+}
+section#projects p {
+  color: hsl(1, 0%, 9%);
+}
+
 section#projects .project img {
   height: 21rem;
-  width: 34rem;
-  border-bottom: 0.5rem solid var(--paragraph-color);
-  border-right: 0.5rem solid var(--paragraph-color);
-  border-radius: 1.3rem;
+  width: 30rem;
+  border-radius: 0.5rem;
 }
 
 /* SKILLS */
@@ -278,7 +307,14 @@ section#skills h2 {
 }
 
 section#skills img {
-  width: 10rem;
+  width: 34rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
 }
 
 footer p {
@@ -288,5 +324,4 @@ footer p {
   line-height: 2.1rem;
 
   text-align: center;
-  padding-bottom: 4rem;
 }
