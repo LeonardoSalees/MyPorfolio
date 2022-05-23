@@ -277,6 +277,7 @@ section#projects .project {
   background-color: var(--box-color);
   border: 2px solid inherit;
   border-radius: 2rem;
+  margin-bottom: 2rem;
 }
 
 section#projects h2 {
@@ -287,6 +288,8 @@ section#projects h3 {
 }
 section#projects p {
   color: hsl(1, 0%, 9%);
+  padding: 2rem;
+  text-align: left;
 }
 
 section#projects .project img {
