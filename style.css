@@ -13,6 +13,7 @@
   --paragraph-color: hsl(0, 8%, 83%);
   --primary-color: hsl(var(--hue), 100%, 72%);
   --secondary-color: hsl(var(--hue), 36%, 50%);
+  --box-color: rgba(216, 216, 216, 0.351);
 
   --headline-bck-color: hsl(var(--hue), 0%, 7%);
 
@@ -273,7 +274,7 @@ section#projects {
   background-color: white;
 }
 section#projects .project {
-  background-color: rgba(216, 216, 216, 0.351);
+  background-color: var(--box-color);
   border: 2px solid inherit;
   border-radius: 2rem;
 }
@@ -308,6 +309,20 @@ section#skills h2 {
 
 section#skills img {
   width: 34rem;
+}
+
+section#skills .content .box-skills {
+  padding: 1rem;
+  background-color: var(--box-color);
+  border-bottom-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+}
+
+section#skills .content .box-skills p {
+  font-size: 1.8rem;
+  color: black;
+  padding: 1rem;
 }
 
 footer {
