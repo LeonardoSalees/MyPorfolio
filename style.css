@@ -40,7 +40,7 @@ body {
 }
 
 .wrapper {
-  width: 37.5rem;
+  width: min(50rem, 100%);
   padding-inline: 2.4rem;
   margin-inline: auto;
 }
@@ -89,7 +89,7 @@ section h2 {
 
 /* ============= MENU =========== */
 
-nav {
+nav#navigation {
   display: flex;
 
   height: var(--nav-height);
@@ -101,7 +101,7 @@ nav {
   z-index: 100;
 }
 
-nav .wrapper {
+nav#navigation .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -313,24 +313,26 @@ section#skills img {
   width: 34rem;
 }
 
-section#skills .content .box-goals {
+section#skills .box-goals {
   text-align: center;
   padding: 2rem;
   background-color: var(--box-color);
+  margin-inline: auto;
 }
 
-section#skills .content .box-goals p {
-  font-size: 1.8rem;
+section#skills .box-goals p {
+  font-size: 2rem;
   color: black;
 }
 section#skills .content .box-skills {
   text-align: left;
+  margin-top: 2rem;
   padding: 2rem;
   background-color: var(--box-color);
   border-radius: 4rem;
 }
 section#skills .content .box-skills h3 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   text-align: center;
   padding: 2rem;
 }
@@ -339,6 +341,7 @@ section#skills .content .box-skills ul {
   list-style: disc;
   list-style-position: inside;
 }
+
 section#skills .content .box-skills ul li {
   text-align: left;
   padding-left: 2rem;
@@ -381,18 +384,193 @@ section#contact .content .btn:hover {
   transition: 1s;
 }
 
-footer {
+footer#footer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 8rem;
 }
 
-footer p {
+footer#footer p {
   color: var(--paragraph-color);
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 2.1rem;
 
   text-align: center;
+}
+
+/* RESPONSIVIDADE */
+
+@media (min-width: 1024px) {
+  .wrapper {
+    width: min(112rem, 100%);
+  }
+
+  section {
+    padding-bottom: var(--nav-height);
+  }
+
+  body {
+    overflow: auto;
+  }
+
+  h2 {
+    padding-top: 2rem;
+    font-size: 5rem;
+  }
+
+  /*--------------- Navigation --------------*/
+  nav#navigation .wrapper * {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    visibility: initial;
+    display: initial;
+    opacity: initial;
+    flex-direction: initial;
+    position: initial;
+    font-size: initial;
+    font-weight: initial;
+    transform: initial;
+    color: initial;
+    background-color: initial;
+    filter: initial;
+  }
+
+  nav#navigation .open-menu,
+  nav#navigation .close-menu {
+    display: none;
+  }
+
+  nav#navigation .logo,
+  nav#navigation .menu ul li a {
+    color: white;
+    font-size: 2rem;
+  }
+  nav#navigation .menu ul li a:hover {
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 2rem;
+  }
+  nav#navigation.scroll .menu ul li a:hover {
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 2rem;
+  }
+  nav#navigation .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  nav#navigation .wrapper ul {
+    display: flex;
+  }
+  /*--------------- Home --------------*/
+  section#home {
+    padding-bottom: 0;
+  }
+  section#home .wrapper header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 5rem;
+  }
+
+  section#home .wrapper header img {
+    margin-left: 1rem;
+    width: 20rem;
+  }
+
+  section#home .wrapper header h1 {
+    font-size: 5rem;
+  }
+  section#home .wrapper header p {
+    font-size: 2rem;
+  }
+  section#home .content ul {
+    padding-top: 5rem;
+  }
+  section#home .content ul li svg {
+    width: 10rem;
+    height: 3rem;
+    padding: 0;
+  }
+  /*--------------- Information --------------*/
+
+  section#information .wrapper {
+    padding: 0;
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  section#information .wrapper .btn {
+    font-size: 4rem;
+  }
+
+  /*--------------- Information --------------*/
+
+  section#projects .wrapper h2 {
+    padding-top: 2rem;
+    font-size: 5rem;
+  }
+  section#projects .content {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  section#projects .content .project h3 {
+    font-size: 2.6rem;
+  }
+  section#projects .content .project p {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  /*--------------- Skills --------------*/
+
+  section#skills .wrapper h2 {
+    padding-top: 2rem;
+    font-size: 5rem;
+  }
+  section#skills .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5rem;
+  }
+  section#skills .box-goals {
+    width: 50%;
+  }
+  section#skills .box-skills {
+    height: 100%;
+  }
+  section#skills .box-skills ul li {
+    font-size: 2rem;
+  }
+
+  /*--------------- Contacts --------------*/
+
+  section#contact {
+    font-size: 5rem;
+  }
+  section#contact .wrapper h2 {
+    padding-top: 2rem;
+    font-size: 5rem;
+  }
+  section#contact .wrapper svg {
+    width: 10rem;
+    height: 5rem;
+  }
+  section#contact .wrapper .btn {
+    font-size: 3rem;
+  }
+
+  /*--------------- Footer --------------*/
+
+  footer#footer .wrapper p {
+    font-size: 2.2rem;
+  }
 }
