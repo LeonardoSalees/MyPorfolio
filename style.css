@@ -282,6 +282,9 @@ section#projects .project {
 section#projects h2 {
   color: black;
 }
+section#projects .wrapper > header {
+  padding-bottom: 2rem;
+}
 section#projects .content h3 {
   padding: 1rem;
 }
@@ -517,10 +520,16 @@ footer#footer p {
     padding-top: 2rem;
     font-size: 5rem;
   }
+  section#projects .wrapper > header {
+    padding-top: 2rem;
+  }
   section#projects .content {
     margin-top: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  section#projects .project {
+    height: 45rem;
   }
   section#projects .content .project h3 {
     font-size: 2.6rem;
