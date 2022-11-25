@@ -487,6 +487,7 @@ section#value .observations {
   align-items: center;
   padding-top: 2.5rem;
   gap: .5rem;
+  text-align: center;
 }
 
 /* Questions */
