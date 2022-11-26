@@ -30,7 +30,6 @@ a {
 }
 
 html {
-  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -455,7 +454,6 @@ section#services .card p {
 section#value .cards {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   gap: 2rem;
 }
@@ -471,6 +469,13 @@ section#value .cards .card {
   width: 300px;
 }
 
+section#value .cards .card .price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 section#value .cards .card .price-number {
   font-size: 2.5rem;
 }
@@ -479,6 +484,13 @@ section#value .observations p:nth-child(1) b {
   padding: .3rem;
   background-color: var(--gray-color);
   color: var(--gray-light-color);
+}
+
+section#value .items ul {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 section#value .observations {
